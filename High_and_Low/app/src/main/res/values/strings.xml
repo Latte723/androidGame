@@ -10,6 +10,10 @@
     <string name="game_restart">Try again??</string>
     <string name="straightCounter">Straight Counter</string>
     <string name="credit">credit</string>
+    <string name="straightCountDefault">0</string>
+    <string name="straightCountText">wins in a row</string>
+    <string name="firstCardDesc">一つ目のカード</string>
+    <string name="secondCardDesc">二つ目のカード</string>
     <string-array name="list">
         <item>Game : Kaffee</item>
         <item>Music : Airport Lounge by Kevin MacLeod\n

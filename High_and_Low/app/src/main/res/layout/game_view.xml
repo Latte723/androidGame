@@ -26,7 +26,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/card_00"></ImageView>
+            app:srcCompat="@drawable/card_00"
+            android:contentDescription="@string/firstCardDesc"></ImageView>
 
         <ImageView
             android:id="@+id/hiddenCard"
@@ -38,7 +39,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/card_00"></ImageView>
+            app:srcCompat="@drawable/card_00"
+            android:contentDescription="@string/secondCardDesc"></ImageView>
     </LinearLayout>
 
     <Button
@@ -87,7 +89,9 @@
             android:minWidth="30dp"
             android:onClick="onClickHigh"
             android:text="@string/high"
-            android:textSize="@dimen/button_text"></Button>
+            android:textSize="@dimen/button_text"
+            android:textColor="#000000"
+            style="?android:attr/buttonBarButtonStyle"></Button>
 
         <Button
             android:id="@+id/low_button"
@@ -99,7 +103,9 @@
             android:minWidth="30dp"
             android:onClick="onClickLow"
             android:text="@string/low"
-            android:textSize="@dimen/button_text"></Button>
+            android:textSize="@dimen/button_text"
+            android:textColor="#000000"
+            style="?android:attr/buttonBarButtonStyle"></Button>
 
     </LinearLayout>
 
@@ -132,29 +138,31 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <LinearLayout
+        android:id="@+id/straightCountLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/button_margin"
-        android:orientation="horizontal"
+        android:layout_marginEnd="@dimen/button_margin"
         android:layout_marginRight="@dimen/button_margin"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" >
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/straightCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/button_margin"
-        android:text="wins in a row"
-        android:textSize="@dimen/counter_text"
-        />
+        <TextView
+            android:id="@+id/straightCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/button_margin"
+            android:text="@string/straightCountText"
+            android:textSize="@dimen/counter_text"
+            />
 
-    <TextView
-        android:id="@+id/straightCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text= "0"
-        android:textSize="@dimen/counter_text"/>
+        <TextView
+            android:id="@+id/straightCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "@string/straightCountDefault"
+            android:textSize="@dimen/counter_text"/>
 
     </LinearLayout>
 
