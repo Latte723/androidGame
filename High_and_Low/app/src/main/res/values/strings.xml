@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">High_and_Low</string>
+    <string name="start">Start</string>
+    <string name="high_low"><![CDATA[High & Low]]></string>
+    <string name="high">High</string>
+    <string name="low">Low</string>
+    <string name="game_start">Game Start!</string>
+    <string name="win">WIN !!</string>
+    <string name="lose">LOSE...</string>
+    <string name="game_restart">Try again??</string>
+    <string name="straightCounter">Straight Counter</string>
+    <string name="credit">credit</string>
+    <string-array name="list">
+        <item>Game : Kaffee</item>
+        <item>Music : Airport Lounge by Kevin MacLeod\n
+            https://incompetech.filmmusic.io/song/3347-airport-lounge\n
+            http://creativecommons.org/licenses/by/4.0/</item>
+        <item>Sound : ポケットサウンド
+            https://pocket-se.info/</item>
+    </string-array>
+</resources>

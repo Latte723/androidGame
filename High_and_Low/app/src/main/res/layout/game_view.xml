@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/back_button"/>
+
+    <LinearLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@id/lose"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/shownCard"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/card_00"></ImageView>
+
+        <ImageView
+            android:id="@+id/hiddenCard"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/card_00"></ImageView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/game_start"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/button_bottom"
+        android:background="@color/button"
+        android:onClick="onGameStart"
+        android:text="@string/game_start"
+        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <Button
+        android:id="@+id/game_restart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginBottom="@dimen/button_bottom"
+        android:background="@color/button"
+        android:onClick="onTryAgain"
+        android:text="@string/game_restart"
+        android:textSize="@dimen/button_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></Button>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/high_button"
+            android:layout_width="221dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/button_margin"
+            android:layout_weight="1"
+            android:background="#E88787"
+            android:minWidth="30dp"
+            android:onClick="onClickHigh"
+            android:text="@string/high"
+            android:textSize="@dimen/button_text"></Button>
+
+        <Button
+            android:id="@+id/low_button"
+            android:layout_width="223dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginHorizontal="@dimen/button_margin"
+            android:layout_weight="1"
+            android:background="#78AEE4"
+            android:minWidth="30dp"
+            android:onClick="onClickLow"
+            android:text="@string/low"
+            android:textSize="@dimen/button_text"></Button>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/win"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/castelar"
+        android:text="@string/win"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="@dimen/message_text"
+        android:layout_marginTop="@dimen/result_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/castelar"
+        android:text="@string/lose"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/message_text"
+        android:layout_marginTop="@dimen/result_top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/button_margin"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/button_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+    <TextView
+        android:id="@+id/straightCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/button_margin"
+        android:text="wins in a row"
+        android:textSize="@dimen/counter_text"
+        />
+
+    <TextView
+        android:id="@+id/straightCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "0"
+        android:textSize="@dimen/counter_text"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
